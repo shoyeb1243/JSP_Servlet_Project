@@ -23,8 +23,8 @@ public class Login extends HttpServlet {
 		String mypwd = req.getParameter("pass1");
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/center", "root", "1243");
-			PreparedStatement ps = con.prepareStatement("select student where email=? and password=?");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mumbai_college", "root", "1243");
+			PreparedStatement ps = con.prepareStatement("select * from emp where email=? and password=?");
 			ps.setString(1, myemail);
 			ps.setString(2, mypwd);
 			ResultSet rs = ps.executeQuery();
