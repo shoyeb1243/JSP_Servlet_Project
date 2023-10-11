@@ -34,7 +34,7 @@ public class Login extends HttpServlet {
 				RequestDispatcher rd = req.getRequestDispatcher("/profile.jsp");
 				rd.include(req, resp);
 			} else {
-				out.print("<h1 style='color : red'> Email And Password Not Matched...</h1>");
+				out.print("<h1 style='color : red'>Email And Password Not Matched...</h1>");
 				RequestDispatcher rd = req.getRequestDispatcher("/login.jsp");
 				rd.include(req, resp);
 			}
